@@ -3,13 +3,12 @@
  */
 package co.grandcircus.famouslab;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Mariah
  *
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Tiny {
 
 	private String name;

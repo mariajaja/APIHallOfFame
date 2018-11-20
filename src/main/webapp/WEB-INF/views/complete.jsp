@@ -5,25 +5,27 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home</title>
+<title>Complete List</title>
 </head>
 <body>
+	<a href="/">Home</a>
 	<div> 
-	<a href="/complete">Complete List</a>
 	    <table>
 	    	<thead>
 	        <tr>
-	            <th>Name</th>
-	            <th>Invented</th>
+	            <th>First Name</th>
+	            <th>Last Name</th>
+	            <th>Innovation</th>
 	            <th>Year</th>
 	        </tr>
 	        </thead>
 	        <tbody>
-		        <c:forEach var="tiny" items="${ tinyList }">
+		        <c:forEach var="complete" items="${ completeList }">
 		            <tr>
-		                <td>${ tiny.name }</td>
-		                <td>${ tiny.invented }</td>
-		                <td>${ tiny.year }</td>
+		                <td>${ complete.firstName }</td>
+		                <td>${ complete.lastName }</td>
+		                <td>${ complete.innovation }</td>
+		                <td>${ complete.year }</td>
 		            </tr>
 		        </c:forEach>
 	        </tbody>

@@ -3,8 +3,6 @@
  */
 package co.grandcircus.famouslab;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,9 +22,15 @@ public class HallOfFameController {
 	@RequestMapping("/")
 	public ModelAndView home() {
 		ModelAndView mav = new ModelAndView("index");
-		List<Tiny> tinies = apiService.getAllTiny();
-		mav.addObject("tinies", tinies);
+		mav.addObject("tinyList", apiService.getAllTiny());
 		return mav;
 	}
 
+	@RequestMapping("/complete")
+	public ModelAndView complete() {
+		ModelAndView mav = new ModelAndView("complete");
+		mav.addObject("completeList", apiService.getAllComplete());
+		return mav;
+	}
+	
 }
